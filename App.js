@@ -3,7 +3,7 @@ import { createStackNavigator } from "@react-navigation/stack";
 import React from "react";
 import BottomNavigation from "./routes/BottomNavigation";
 import LoginForm from "./screens/LoginForm.js";
-import LoginHome from "./screens/LoginHome.js";
+import Landing from "./screens/Landing";
 import Register from "./screens/Register.js";
 import RegisterConfirmation from "./screens/RegisterConfirmation";
 
@@ -14,7 +14,7 @@ const App = () => (
     <Stack.Navigator>
       <Stack.Screen
         name='LoginHome'
-        component={LoginHome}
+        component={Landing}
         options={{ headerShown: false }}
       />
       <Stack.Screen

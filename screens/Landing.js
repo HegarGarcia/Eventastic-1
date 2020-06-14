@@ -5,7 +5,7 @@ import FontAwesome from 'react-native-vector-icons/FontAwesome';
 if (Text.defaultProps == null) Text.defaultProps = {};
 Text.defaultProps.allowFontScaling = false;
 
-const LoginHome = ({ navigation }) => {
+const Landing = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <View style={styles.whiteBox}>
@@ -97,4 +97,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default LoginHome;
+export default Landing;

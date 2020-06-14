@@ -1,140 +1,72 @@
-import React from 'react';
-import {
-  View,
-  Text,
-  StyleSheet,
-  ScrollView,
-  TouchableHighlight
-} from 'react-native';
-import { Searchbar, Card } from 'react-native-paper';
-import Ionicon from 'react-native-vector-icons/Ionicons';
+import React from "react";
+import { ScrollView, StyleSheet, Text, View } from "react-native";
+import { Searchbar } from "react-native-paper";
+import Category from "../components/Category";
 
-const Search = ({ navigation }) => {
-  return (
-    <View style={{ backgroundColor: 'white', flex: 1 }}>
-      <ScrollView>
-        <View style={styles.container}>
-          <Text style={styles.title}>Búsqueda</Text>
-          <Searchbar
-            placeholder="Busca aquí..."
-            style={{ backgroundColor: '#dedede' }}
-          />
-          <Text style={styles.subtitle}>Categorías</Text>
-          <View style={styles.card}>
-            <TouchableHighlight
-              onPress={() => navigation.push('MusicCategory')}
-            >
-              <Card>
-                <Card.Title
-                  title="Música"
-                  titleStyle={styles.cardTitle}
-                  style={{ backgroundColor: '#3564e6' }}
-                  left={() => (
-                    <Ionicon name="ios-musical-notes" size={35} color="white" />
-                  )}
-                />
-              </Card>
-            </TouchableHighlight>
-          </View>
-          <View style={styles.card}>
-            <TouchableHighlight
-              onPress={() => navigation.push('MusicCategory')}
-            >
-              <Card>
-                <Card.Title
-                  title="Político"
-                  titleStyle={styles.cardTitle}
-                  style={{ backgroundColor: '#35cc65' }}
-                  left={() => (
-                    <Ionicon name="ios-bookmarks" size={35} color="white" />
-                  )}
-                />
-              </Card>
-            </TouchableHighlight>
-          </View>
-          <View style={styles.card}>
-            <TouchableHighlight
-              onPress={() => navigation.push('MusicCategory')}
-            >
-              <Card>
-                <Card.Title
-                  title="Arte"
-                  titleStyle={styles.cardTitle}
-                  style={{ backgroundColor: '#de4545' }}
-                  left={() => (
-                    <Ionicon name="md-brush" size={35} color="white" />
-                  )}
-                />
-              </Card>
-            </TouchableHighlight>
-          </View>
-          <View style={styles.card}>
-            <TouchableHighlight
-              onPress={() => navigation.push('MusicCategory')}
-            >
-              <Card>
-                <Card.Title
-                  title="Comida"
-                  titleStyle={styles.cardTitle}
-                  style={{ backgroundColor: '#4fd9db' }}
-                  left={() => (
-                    <Ionicon name="md-pizza" size={35} color="white" />
-                  )}
-                />
-              </Card>
-            </TouchableHighlight>
-          </View>
-          <View style={styles.card}>
-            <TouchableHighlight
-              onPress={() => navigation.push('MusicCategory')}
-            >
-              <Card>
-                <Card.Title
-                  title="Entretenimiento"
-                  titleStyle={styles.cardTitle}
-                  style={{ backgroundColor: '#de1f72' }}
-                  left={() => (
-                    <Ionicon name="md-film" size={35} color="white" />
-                  )}
-                />
-              </Card>
-            </TouchableHighlight>
-          </View>
-        </View>
-      </ScrollView>
-    </View>
-  );
-};
+const Search = () => (
+  <View style={{ backgroundColor: "white", flex: 1 }}>
+    <ScrollView>
+      <View style={styles.container}>
+        <Text style={styles.title}>Búsqueda</Text>
+        <Searchbar
+          placeholder='Busca aquí...'
+          style={{ backgroundColor: "#dedede" }}
+        />
+        <Text style={styles.subtitle}>Categorías</Text>
+        <Category
+          title='Música'
+          route='MusicCategory'
+          color='#3564e6'
+          icon='ios-musical-notes'
+        />
+        <Category
+          title='Político'
+          route='MusicCategory'
+          color='#35cc65'
+          icon='ios-bookmarks'
+        />
+        <Category
+          title='Arte'
+          route='MusicCategory'
+          color='#de4545'
+          icon='md-brush'
+        />
+        <Category
+          title='Comida'
+          route='MusicCategory'
+          color='#4fd9db'
+          icon='md-pizza'
+        />
+        <Category
+          title='Entretenimiento'
+          route='MusicCategory'
+          color='#de1f72'
+          icon='md-film'
+        />
+      </View>
+    </ScrollView>
+  </View>
+);
 
 const styles = StyleSheet.create({
-  card: {
-    marginBottom: 20
-  },
-  cardImage: {
-    height: 130
-  },
-  cardTitle: {
-    color: 'white',
-    fontSize: 25
-  },
   title: {
     fontSize: 50,
-    fontWeight: 'bold',
+    fontWeight: "bold",
     marginBottom: 25,
-    textAlign: 'center'
+    textAlign: "center",
   },
   subtitle: {
     fontSize: 30,
-    fontWeight: 'bold',
+    fontWeight: "bold",
     marginTop: 40,
-    marginBottom: 20
+    marginBottom: 20,
   },
   container: {
     flex: 1,
-    backgroundColor: 'white',
+    backgroundColor: "white",
     paddingTop: 30,
-    paddingHorizontal: 20
-  }
+    paddingHorizontal: 20,
+  },
 });
 
 export default Search;

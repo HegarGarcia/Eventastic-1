@@ -10,7 +10,7 @@ import {
 import { TextInput, List, Button } from 'react-native-paper';
 import Ionicon from 'react-native-vector-icons/Ionicons';
 
-const newEvent = ({ navigation }) => {
+const NewEvent = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <ScrollView>
@@ -172,4 +172,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default newEvent;
+export default NewEvent;

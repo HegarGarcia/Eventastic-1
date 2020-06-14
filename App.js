@@ -5,7 +5,7 @@ import BottomNavigation from "./routes/BottomNavigation";
 import LoginForm from "./screens/LoginForm.js";
 import LoginHome from "./screens/LoginHome.js";
 import Register from "./screens/Register.js";
-import RegisterConfirmation from "./screens/registerConfirmation";
+import RegisterConfirmation from "./screens/RegisterConfirmation";
 
 const Stack = createStackNavigator();
 

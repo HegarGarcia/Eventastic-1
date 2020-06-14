@@ -1,6 +1,6 @@
 import { createStackNavigator } from "@react-navigation/stack";
 import React from "react";
-import newEvent from "./screens/newEvent.js";
+import NewEvent from "./screens/NewEvent.js";
 import Profile from "./screens/Profile.js";
 import Settings from "./screens/Settings.js";
 
@@ -26,7 +26,7 @@ const ProfileStackNavigator = () => {
       />
       <ProfileStack.Screen
         name='newEvent'
-        component={newEvent}
+        component={NewEvent}
         options={{ headerShown: false }}
       />
     </ProfileStack.Navigator>
